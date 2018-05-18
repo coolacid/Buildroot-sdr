@@ -1,0 +1,18 @@
+#!/bin/sh
+
+# Parts taken from https://github.com/mutability/dump1090/blob/master/debian/dump1090-mutability.init
+# Todo: make a "config" file that loads and builds the args
+
+case "$1" in
+  start)
+    start-stop-daemon -S -b -x "/bin/piaware"
+    ;;
+  stop)
+    exit 1
+    ;;
+  *)
+    exit 1
+    ;;
+esac
+
+exit 0

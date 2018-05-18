@@ -1,0 +1,6 @@
+config BR2_PACKAGE_FLIGHTAWARE
+	bool "Flight Aware"
+	select BR2_PACKAGE_TCL
+	help
+	    This will install the piaware tools to send data to flightaware
+

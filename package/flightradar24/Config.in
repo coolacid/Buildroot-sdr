@@ -1,0 +1,5 @@
+config BR2_PACKAGE_FLIGHTRADAR24
+	bool "FLIGHTRADAR24"
+	help
+	    This will install the staticly linked ARM binaries
+
