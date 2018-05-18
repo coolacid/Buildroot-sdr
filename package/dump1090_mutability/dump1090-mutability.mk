@@ -11,6 +11,9 @@ DUMP1090_MUTABILITY_SITE = git://github.com/mutability/dump1090.git
 # DUMP1090_MUTABILITY_LICENSE_FILES = anet.h
 DUMP1090_MUTABILITY_DEPENDENCIES = host-pkgconf librtlsdr
 
+$(if $(BR2_PACKAGE_THTTPD), DUMP1090_MUTABILITY_DEPENDENCIES = DUMP1090_MUTABILITY_DEPENDENCIES + " thttpd")
+$(if $(BR2_PACKAGE_NGINX), DUMP1090_MUTABILITY_DEPENDENCIES = DUMP1090_MUTABILITY_DEPENDENCIES + " nginx")
+
 define DUMP1090_MUTABILITY_BUILD_CMDS
 	$(TARGET_MAKE_ENV) $(MAKE) $(TARGET_CONFIGURE_OPTS) PREFIX=/usr -C $(@D)
 endef
@@ -24,7 +27,8 @@ define DUMP1090_MUTABILITY_INSTALL_TARGET_CMDS
 	cp -r $(@D)/public_html/* $(TARGET_DIR)/usr/share/dump1090
 	mkdir -p $(TARGET_DIR)/usr/share/dump1090/data
 	mv $(TARGET_DIR)/usr/share/dump1090/gmap.html $(TARGET_DIR)/usr/share/dump1090/index.html
-	ln -sf /usr/share/dump1090 $(TARGET_DIR)/usr/html/
+	$(if $(BR2_PACKAGE_NGINX),ln -sf /usr/share/dump1090 $(TARGET_DIR)/usr/html/)
+	$(if $(BR2_PACKAGE_THTTPD),ln -sf /usr/share/dump1090 $(TARGET_DIR)/var/www/)
 endef
 
 $(eval $(generic-package))
