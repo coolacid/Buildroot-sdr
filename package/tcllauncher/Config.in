@@ -1,4 +1,4 @@
 config BR2_PACKAGE_TCLLAUNCHER
-	bool "TCL Launcher"
+	bool "TCL Launcher (BROKEN)"
 	help
 	  This is https://github.com/flightaware/tcllauncher

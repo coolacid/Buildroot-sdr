@@ -1,5 +1,5 @@
 config BR2_PACKAGE_FLIGHTAWARE
-	bool "Flight Aware"
+	bool "Flight Aware (BROKEN)"
         depends on BR2_PACKAGE_DUMP1090_MUTABILITY
 	select BR2_PACKAGE_TCL
 	help

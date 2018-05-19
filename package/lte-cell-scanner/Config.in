@@ -1,5 +1,5 @@
 config BR2_PACKAGE_LTE_CELL_SCANNER
-	bool "LTE Cell Scanner"
+	bool "LTE Cell Scanner (BROKEN)"
 	depends on BR2_PACKAGE_LIBRTLSDR
 	depends on BR2_TOOLCHAIN_BUILDROOT_CXX
 	depends on BR2_PACKAGE_BOOST
@@ -10,4 +10,9 @@ config BR2_PACKAGE_LTE_CELL_SCANNER
 	  This is https://github.com/flightaware/tcllauncher
 
 comment "LTE_CELL_SCANNER needs a toolchain w/ c++"
-        depends on !BR2_TOOLCHAIN_BUILDROOT_CXX
+	depends on !BR2_TOOLCHAIN_BUILDROOT_CXX
+
+comment "LTE_CELL_SCANNER requires BOOST with System and Threads"
+	depends on !BR2_PACKAGE_BOOST
+	depends on !BR2_PACKAGE_BOOST_SYSTEM
+	depends on !BR2_PACKAGE_BOOST_THREAD
