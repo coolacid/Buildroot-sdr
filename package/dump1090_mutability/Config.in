@@ -1,5 +1,5 @@
 config BR2_PACKAGE_DUMP1090_MUTABILITY
-	bool "dump1090_mutability"
+	bool "Dump1090 Mutability Fork"
 	depends on BR2_TOOLCHAIN_HAS_THREADS # librtlsdr
 	depends on !BR2_PACKAGE_TINYHTTPD # Does not parse CSS and JSON correctly
 	select BR2_PACKAGE_LIBRTLSDR
