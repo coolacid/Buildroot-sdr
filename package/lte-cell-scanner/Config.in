@@ -2,6 +2,10 @@ config BR2_PACKAGE_LTE_CELL_SCANNER
 	bool "LTE Cell Scanner"
 	depends on BR2_PACKAGE_LIBRTLSDR
 	depends on BR2_TOOLCHAIN_BUILDROOT_CXX
+	depends on BR2_PACKAGE_BOOST
+	depends on BR2_PACKAGE_BOOST_SYSTEM
+	depends on BR2_PACKAGE_BOOST_THREAD
+
 	help
 	  This is https://github.com/flightaware/tcllauncher
 
