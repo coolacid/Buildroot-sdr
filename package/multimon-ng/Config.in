@@ -1,0 +1,5 @@
+config BR2_PACKAGE_MULTIMON_NG
+	bool "Multimon-ng"
+	select BR2_PACKAGE_LIBRTLSDR
+	help
+            multimon-ng is the successor of multimon. It decodes the following digital transmission
