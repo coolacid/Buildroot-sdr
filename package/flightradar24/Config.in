@@ -1,5 +1,8 @@
 config BR2_PACKAGE_FLIGHTRADAR24
-	bool "FLIGHTRADAR24"
+	bool "Flight Radar 24"
+	depends on BR2_PACKAGE_DUMP1090_MUTABILITY
 	help
 	    This will install the staticly linked ARM binaries
 
+comment "Flight Aware required DUMP1090_MUTABILITY (regular untested)
+	depends on !BR2_PACKAGE_DUMP1090_MUTABILITY
