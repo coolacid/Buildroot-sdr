@@ -1,7 +1,7 @@
 # Buildroot-adsb
 Buildroot modules used for ADSB
 
-This is an external pack for [Buildroot](https://buildroot.org/). It is intended to build a base image suitable for NetBooting. My current personal build (to be shared in a different repo later) runs aprox 16M including:
+This is an external pack for [Buildroot](https://buildroot.org/). It is intended to build a base image suitable for NetBooting. My current personal build (to be shared in a different repo later) runs aprox 16M (6.7 after gzip) including:
 - busybox
 - uclibc
 - ntpd 
@@ -14,6 +14,11 @@ This is an external pack for [Buildroot](https://buildroot.org/). It is intended
 - rtl_sdr tools
 - fr24feed (Flightradar24)
 - bash (for fr24feed, see below)
+
+```
+16248832 May 18 13:49 rootfs.cpio
+ 6924676 May 18 13:49 rootfs.cpio.gz
+```
 
 ## Simple start 
 
