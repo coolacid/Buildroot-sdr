@@ -1,9 +1,9 @@
 config BR2_PACKAGE_FLIGHTAWARE
 	bool "Flight Aware (BROKEN)"
-        depends on BR2_PACKAGE_DUMP1090_MUTABILITY
+	depends on BR2_PACKAGE_DUMP1090_MUTABILITY
 	select BR2_PACKAGE_TCL
 	help
 	    This will install the piaware tools to send data to flightaware
 
 comment "Flight Aware required DUMP1090_MUTABILITY (regular untested)
-        depends on !BR2_PACKAGE_DUMP1090_MUTABILITY
+	depends on !BR2_PACKAGE_DUMP1090_MUTABILITY

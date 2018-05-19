@@ -14,4 +14,4 @@ comment "dump1090 needs a toolchain w/ threads"
 	depends on !BR2_TOOLCHAIN_HAS_THREADS
 
 comment "dump1090 will not work with TinyHTTPD"
-        depends on BR2_PACKAGE_TINYHTTPD
+	depends on BR2_PACKAGE_TINYHTTPD

@@ -13,7 +13,7 @@ define FLIGHTRADAR24_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 -D $(@D)/fr24feed $(TARGET_DIR)/usr/bin/fr24feed
 	$(INSTALL) -m 0755 -D $(FLIGHTRADAR24_PKGDIR)/init/S90flightradar24 $(TARGET_DIR)/etc/init.d/S90flightradar24
 	$(INSTALL) -m 0755 -D $(FLIGHTRADAR24_PKGDIR)/config/fr24feed.ini $(TARGET_DIR)/etc/fr24feed.ini
-        mkdir -p $(TARGET_DIR)/var/log/fr24feed/
+	mkdir -p $(TARGET_DIR)/var/log/fr24feed/
 endef
 
 $(eval $(generic-package))
