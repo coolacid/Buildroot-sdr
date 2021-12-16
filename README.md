@@ -1,5 +1,5 @@
-# Buildroot-adsb
-Buildroot modules used for ADSB
+# Buildroot-SDR
+Buildroot modules used for SDR and ADSB, directed for use on RaspberryPi. 
 
 This is an external pack for [Buildroot](https://buildroot.org/). It is intended to build a base image suitable for NetBooting. My current personal build (to be shared in a different repo later) runs aprox 16M (6.7 after gzip) including:
 - busybox
