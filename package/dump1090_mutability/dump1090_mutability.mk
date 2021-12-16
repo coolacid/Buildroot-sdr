@@ -4,8 +4,8 @@
 #
 ################################################################################
 
-DUMP1090_MUTABILITY_VERSION = fb5942dba6505a21cbafc7905a5a7c513b214dc9
-DUMP1090_MUTABILITY_SITE = git://github.com/mutability/dump1090.git
+DUMP1090_MUTABILITY_VERSION = 42a5c2a97874ad5efbe85e55ef09a489072624a6
+DUMP1090_MUTABILITY_SITE = git://github.com/flightaware/dump1090.git
 # DUMP1090_MUTABILITY_LICENSE = BSD-3-Clause
 # no real license file
 # DUMP1090_MUTABILITY_LICENSE_FILES = anet.h
@@ -15,7 +15,7 @@ $(ifdef $(BR2_PACKAGE_THTTPD), DUMP1090_MUTABILITY_DEPENDENCIES += " thttpd")
 $(ifdef $(BR2_PACKAGE_NGINX), DUMP1090_MUTABILITY_DEPENDENCIES += " nginx")
 
 define DUMP1090_MUTABILITY_BUILD_CMDS
-	$(TARGET_MAKE_ENV) $(MAKE) $(TARGET_CONFIGURE_OPTS) PREFIX=/usr -C $(@D)
+	$(TARGET_MAKE_ENV) CFLAGS=-Wno-error $(MAKE) $(TARGET_CONFIGURE_OPTS) PREFIX=/usr -C $(@D)
 endef
 
 define DUMP1090_MUTABILITY_INSTALL_TARGET_CMDS
