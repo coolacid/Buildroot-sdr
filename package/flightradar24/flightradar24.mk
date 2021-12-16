@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-FLIGHTRADAR24_VERSION = 1.0.19-15_armhf
+FLIGHTRADAR24_VERSION = 1.0.25-3_armhf
 FLIGHTRADAR24_SITE = https://repo-feed.flightradar24.com/rpi_binaries
 FLIGHTRADAR24_SOURCE = fr24feed_$(FLIGHTRADAR24_VERSION).tgz
 FLIGHTRADAR24_STRIP_COMPONENTS = 1
