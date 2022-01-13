@@ -1,0 +1,11 @@
+--- a/Makefile       2022-01-12 19:02:16.819530775 -0500
++++ b/Makefile    2022-01-12 19:02:19.435571655 -0500
+@@ -3,7 +3,7 @@
+ DUMP1090_VERSION ?= unknown
+ 
+ CFLAGS ?= -O3 -g
+-DUMP1090_CFLAGS := -std=c11 -fno-common -Wall -Wmissing-declarations -Werror -W
++DUMP1090_CFLAGS := -std=c11 -fno-common -Wall -Wmissing-declarations -W
+ DUMP1090_CPPFLAGS := -I. -DMODES_DUMP1090_VERSION=\"$(DUMP1090_VERSION)\" -DMODES_DUMP1090_VARIANT=\"dump1090-fa\"
+ 
+ LIBS = -lpthread -lm
