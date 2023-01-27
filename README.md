@@ -9,7 +9,6 @@ This is an external pack for [Buildroot](https://buildroot.org/). It is intended
 - uchdpc
 - nginx (might be replaced later with something smaller?)
 - collectd
-- dump1090-mutability
 - strace (for debugging)
 - rtl_sdr tools
 - fr24feed (Flightradar24)
