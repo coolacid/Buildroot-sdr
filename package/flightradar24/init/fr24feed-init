@@ -1,0 +1,4 @@
+#!/bin/sh
+(while true; do 
+    /bin/fr24feed
+done)

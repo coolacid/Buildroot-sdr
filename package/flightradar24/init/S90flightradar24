@@ -5,7 +5,7 @@
 
 case "$1" in
   start)
-    start-stop-daemon -S -b -x "/bin/fr24feed"
+    start-stop-daemon -S -b -x "/bin/fr24feed-init"
     ;;
   stop)
     exit 1
